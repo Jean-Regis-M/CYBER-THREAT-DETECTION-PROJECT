@@ -10,8 +10,11 @@ import os
 from config.config import MODELS_DIR
 
 class ThreatDetectionModel:
+    
     def __init__(self):
+        
         self.models = {
+        
             'random_forest': RandomForestClassifier(random_state=42),
             'gradient_boosting': GradientBoostingClassifier(random_state=42),
             'svm': SVC(random_state=42),
@@ -40,6 +43,7 @@ class ThreatDetectionModel:
                 'cv_std': std_score,
                 'cv_scores': cv_scores
             }
+            
             
             print(f"{name}: {mean_score:.4f} (+/- {std_score * 2:.4f})")
             
