@@ -48,6 +48,7 @@ class ThreatDetectionModel:
             print(f"{name}: {mean_score:.4f} (+/- {std_score * 2:.4f})")
             
             # Train the model on full training data
+            
             model.fit(X_train, y_train)
             
             # Update best model
@@ -111,6 +112,7 @@ class ThreatDetectionModel:
         print(f"Model saved to {model_path}")
         
         # Save all results
+        
         results_path = os.path.join(MODELS_DIR, 'training_results.pkl')
         joblib.dump(self.results, results_path)
         
