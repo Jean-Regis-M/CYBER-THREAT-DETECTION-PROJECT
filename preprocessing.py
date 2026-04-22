@@ -22,6 +22,7 @@ class DataPreprocessor:
          # Fill numerical columns with median
         
         numerical_cols = df.select_dtypes(include=[np.number]).columns
+        
         df[numerical_cols] = df[numerical_cols].fillna(df[numerical_cols].median())
         
         # Fill categorical columns with mode
