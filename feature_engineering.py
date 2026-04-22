@@ -49,6 +49,7 @@ class FeatureEngineer:
     
     def plot_feature_importance(self, importance_df, top_n=15):
         """Plot feature importance"""
+        
         plt.figure(figsize=(12, 8))
         top_features = importance_df.head(top_n)
         
