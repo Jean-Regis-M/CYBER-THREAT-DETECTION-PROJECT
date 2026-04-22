@@ -29,6 +29,7 @@ class DataDownloader:
             'duration': np.random.exponential(1, n_samples),
             'protocol_type': np.random.choice([0, 1, 2], n_samples),  # 0:TCP, 1:UDP, 2:ICMP
             'service': np.random.randint(0, 10, n_samples),
+            
             'flag': np.random.randint(0, 5, n_samples),
             'src_bytes': np.random.lognormal(5, 2, n_samples),
             'dst_bytes': np.random.lognormal(6, 2, n_samples),
